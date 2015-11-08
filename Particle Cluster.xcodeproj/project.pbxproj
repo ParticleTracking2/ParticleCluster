@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA4015991BEF1AF2006CAA4C /* libboost_thread-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4015941BEF1AF2006CAA4C /* libboost_thread-mt.dylib */; };
+		CA40159A1BEF1AF2006CAA4C /* libCGAL_Core.11.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4015951BEF1AF2006CAA4C /* libCGAL_Core.11.0.0.dylib */; };
+		CA40159B1BEF1AF2006CAA4C /* libCGAL.11.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4015961BEF1AF2006CAA4C /* libCGAL.11.0.0.dylib */; };
+		CA40159C1BEF1AF2006CAA4C /* libgmp.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4015971BEF1AF2006CAA4C /* libgmp.10.dylib */; };
+		CA40159D1BEF1AF2006CAA4C /* libmpfr.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4015981BEF1AF2006CAA4C /* libmpfr.4.dylib */; };
 		CA5BBC481BC4E8E0001C23CF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA5BBC471BC4E8E0001C23CF /* main.cpp */; };
-		CA78C12C1BCE20FE00CA05E3 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA78C12A1BCE20FE00CA05E3 /* Triangle.cpp */; settings = {ASSET_TAGS = (); }; };
-		CA78C1311BCE222A00CA05E3 /* ParticleData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA78C12E1BCE222A00CA05E3 /* ParticleData.cpp */; settings = {ASSET_TAGS = (); }; };
+		CA78C12C1BCE20FE00CA05E3 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA78C12A1BCE20FE00CA05E3 /* Triangle.cpp */; };
+		CA78C1311BCE222A00CA05E3 /* ParticleData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA78C12E1BCE222A00CA05E3 /* ParticleData.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CA4015941BEF1AF2006CAA4C /* libboost_thread-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_thread-mt.dylib"; path = "../../../../../usr/local/Cellar/boost/1.59.0/lib/libboost_thread-mt.dylib"; sourceTree = "<group>"; };
+		CA4015951BEF1AF2006CAA4C /* libCGAL_Core.11.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCGAL_Core.11.0.0.dylib; path = ../../../../../usr/local/Cellar/cgal/4.6.3/lib/libCGAL_Core.11.0.0.dylib; sourceTree = "<group>"; };
+		CA4015961BEF1AF2006CAA4C /* libCGAL.11.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCGAL.11.0.0.dylib; path = ../../../../../usr/local/Cellar/cgal/4.6.3/lib/libCGAL.11.0.0.dylib; sourceTree = "<group>"; };
+		CA4015971BEF1AF2006CAA4C /* libgmp.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmp.10.dylib; path = ../../../../../usr/local/Cellar/gmp/6.0.0a/lib/libgmp.10.dylib; sourceTree = "<group>"; };
+		CA4015981BEF1AF2006CAA4C /* libmpfr.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmpfr.4.dylib; path = ../../../../../usr/local/Cellar/mpfr/3.1.3/lib/libmpfr.4.dylib; sourceTree = "<group>"; };
 		CA5BBC441BC4E8E0001C23CF /* Particle Cluster */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Particle Cluster"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5BBC471BC4E8E0001C23CF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CA78C12A1BCE20FE00CA05E3 /* Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Triangle.cpp; path = DataTypes/Triangle.cpp; sourceTree = "<group>"; };
@@ -39,6 +49,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA4015991BEF1AF2006CAA4C /* libboost_thread-mt.dylib in Frameworks */,
+				CA40159A1BEF1AF2006CAA4C /* libCGAL_Core.11.0.0.dylib in Frameworks */,
+				CA40159B1BEF1AF2006CAA4C /* libCGAL.11.0.0.dylib in Frameworks */,
+				CA40159C1BEF1AF2006CAA4C /* libgmp.10.dylib in Frameworks */,
+				CA40159D1BEF1AF2006CAA4C /* libmpfr.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +63,11 @@
 		CA5BBC3B1BC4E8E0001C23CF = {
 			isa = PBXGroup;
 			children = (
+				CA4015941BEF1AF2006CAA4C /* libboost_thread-mt.dylib */,
+				CA4015951BEF1AF2006CAA4C /* libCGAL_Core.11.0.0.dylib */,
+				CA4015961BEF1AF2006CAA4C /* libCGAL.11.0.0.dylib */,
+				CA4015971BEF1AF2006CAA4C /* libgmp.10.dylib */,
+				CA4015981BEF1AF2006CAA4C /* libmpfr.4.dylib */,
 				CA5BBC461BC4E8E0001C23CF /* Particle Cluster */,
 				CA5BBC451BC4E8E0001C23CF /* Products */,
 			);
@@ -227,18 +247,42 @@
 		CA5BBC4C1BC4E8E0001C23CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/cgal/4.6.3/include,
+					/usr/local/Cellar/boost/1.59.0/include,
+					/usr/local/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/cgal/4.6.3/lib/**",
+					"$(inherited)",
+					/usr/local/Cellar/boost/1.59.0/lib,
+					/usr/local/Cellar/cgal/4.6.3/lib,
+					/usr/local/Cellar/gmp/6.0.0a/lib,
+					/usr/local/Cellar/mpfr/3.1.3/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 			};
 			name = Debug;
 		};
 		CA5BBC4D1BC4E8E0001C23CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/cgal/4.6.3/include,
+					/usr/local/Cellar/boost/1.59.0/include,
+					/usr/local/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/cgal/4.6.3/lib/**",
+					"$(inherited)",
+					/usr/local/Cellar/boost/1.59.0/lib,
+					/usr/local/Cellar/cgal/4.6.3/lib,
+					/usr/local/Cellar/gmp/6.0.0a/lib,
+					/usr/local/Cellar/mpfr/3.1.3/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 			};
 			name = Release;
 		};

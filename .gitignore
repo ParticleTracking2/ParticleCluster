@@ -1,2 +1,9 @@
 # Ignore OSX Files
 .DS_Store
+# CMAKE
+Particle Cluster/CMakeFiles
+Particle Cluster/CMakeCache.txt
+Particle Cluster/CMakeLists.txt
+Particle Cluster/Makefile
+Particle Cluster/cmake_install.cmake
+Particle Cluster/main
