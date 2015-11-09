@@ -15,7 +15,7 @@ ParticleData::ParticleData()
     q4Value = 0;
 }
 
-ParticleData::ParticleData(Vector2 pos)
+ParticleData::ParticleData(Point2D pos)
 {
     position.x = pos.x;
     position.y = pos.y;
@@ -29,7 +29,7 @@ ParticleData::ParticleData(float x, float y)
     q4Value = 0;
 }
 
-ParticleData::ParticleData(Vector2 pos, float q4)
+ParticleData::ParticleData(Point2D pos, float q4)
 {
     position.x = pos.x;
     position.y = pos.y;
@@ -50,7 +50,7 @@ ParticleData::~ParticleData()
     q4Value = 0;
 }
 
-Vector2 ParticleData::GetPosition()
+Point2D ParticleData::GetPosition()
 {
     return position;
 }

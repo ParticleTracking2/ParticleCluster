@@ -10,22 +10,25 @@
 #define Triangle_hpp
 
 #include <stdio.h>
-#include "Vector2.hpp"
+#include "Point2D.hpp"
 
 class Triangle
 {
 private:
-    Vector2 position1;
-    Vector2 position2;
-    Vector2 position3;
+    Point2D position1;
+    Point2D position2;
+    Point2D position3;
     
 public:
     Triangle();
-    Triangle(Vector2 pos1, Vector2 pos2, Vector2 pos3);
+    Triangle(Point2D pos1, Point2D pos2, Point2D pos3);
     virtual ~Triangle();
-    Vector2 GetPosition1();
-    Vector2 GetPosition2();
-    Vector2 GetPosition3();
+    Point2D GetPosition1();
+    void SetPosition1(Point2D pos1);
+    Point2D GetPosition2();
+    void SetPosition2(Point2D pos2);
+    Point2D GetPosition3();
+    void SetPosition3(Point2D pos3);
 };
 
 #endif /* Triangle_hpp */

@@ -15,6 +15,7 @@
 		CA5BBC481BC4E8E0001C23CF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA5BBC471BC4E8E0001C23CF /* main.cpp */; };
 		CA78C12C1BCE20FE00CA05E3 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA78C12A1BCE20FE00CA05E3 /* Triangle.cpp */; };
 		CA78C1311BCE222A00CA05E3 /* ParticleData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA78C12E1BCE222A00CA05E3 /* ParticleData.cpp */; };
+		CAF182701BF02EDD00446A38 /* DelaunayWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CAF1826E1BF02EDD00446A38 /* DelaunayWrapper.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,7 +42,9 @@
 		CA78C12B1BCE20FE00CA05E3 /* Triangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Triangle.hpp; path = DataTypes/Triangle.hpp; sourceTree = "<group>"; };
 		CA78C12E1BCE222A00CA05E3 /* ParticleData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParticleData.cpp; path = DataTypes/ParticleData.cpp; sourceTree = "<group>"; };
 		CA78C12F1BCE222A00CA05E3 /* ParticleData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ParticleData.hpp; path = DataTypes/ParticleData.hpp; sourceTree = "<group>"; };
-		CA78C1301BCE222A00CA05E3 /* Vector2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Vector2.hpp; path = DataTypes/Vector2.hpp; sourceTree = "<group>"; };
+		CAF182681BF02C3000446A38 /* Point2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Point2D.hpp; path = DataTypes/Point2D.hpp; sourceTree = "<group>"; };
+		CAF1826E1BF02EDD00446A38 /* DelaunayWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DelaunayWrapper.cpp; path = Wrappers/DelaunayWrapper.cpp; sourceTree = "<group>"; };
+		CAF1826F1BF02EDD00446A38 /* DelaunayWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DelaunayWrapper.hpp; path = Wrappers/DelaunayWrapper.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 		CA5BBC461BC4E8E0001C23CF /* Particle Cluster */ = {
 			isa = PBXGroup;
 			children = (
+				CAF1826A1BF02E7200446A38 /* Wrappers */,
 				CA5BBC471BC4E8E0001C23CF /* main.cpp */,
 				CA78C12D1BCE210300CA05E3 /* DataTypes */,
 			);
@@ -93,13 +97,22 @@
 		CA78C12D1BCE210300CA05E3 /* DataTypes */ = {
 			isa = PBXGroup;
 			children = (
+				CAF182681BF02C3000446A38 /* Point2D.hpp */,
 				CA78C12E1BCE222A00CA05E3 /* ParticleData.cpp */,
 				CA78C12F1BCE222A00CA05E3 /* ParticleData.hpp */,
-				CA78C1301BCE222A00CA05E3 /* Vector2.hpp */,
 				CA78C12A1BCE20FE00CA05E3 /* Triangle.cpp */,
 				CA78C12B1BCE20FE00CA05E3 /* Triangle.hpp */,
 			);
 			name = DataTypes;
+			sourceTree = "<group>";
+		};
+		CAF1826A1BF02E7200446A38 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				CAF1826E1BF02EDD00446A38 /* DelaunayWrapper.cpp */,
+				CAF1826F1BF02EDD00446A38 /* DelaunayWrapper.hpp */,
+			);
+			name = Wrappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF182701BF02EDD00446A38 /* DelaunayWrapper.cpp in Sources */,
 				CA5BBC481BC4E8E0001C23CF /* main.cpp in Sources */,
 				CA78C12C1BCE20FE00CA05E3 /* Triangle.cpp in Sources */,
 				CA78C1311BCE222A00CA05E3 /* ParticleData.cpp in Sources */,

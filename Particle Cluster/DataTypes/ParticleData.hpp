@@ -10,22 +10,22 @@
 #define ParticleData_hpp
 
 #include <stdio.h>
-#include "Vector2.hpp"
+#include "Point2D.hpp"
 
 class ParticleData
 {
 private:
-    Vector2 position;
+    Point2D position;
     float q4Value;
     
 public:
     ParticleData();
     ParticleData(float x, float y);
-    ParticleData(Vector2 pos);
+    ParticleData(Point2D pos);
     ParticleData(float x, float y, float q4);
-    ParticleData(Vector2 pos, float q4);
+    ParticleData(Point2D pos, float q4);
     virtual ~ParticleData();
-    Vector2 GetPosition();
+    Point2D GetPosition();
     float GetQ4();
 };
 

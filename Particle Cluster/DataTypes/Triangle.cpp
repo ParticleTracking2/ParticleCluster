@@ -18,7 +18,7 @@ Triangle::Triangle()
     position3.y = 0;
 }
 
-Triangle::Triangle(Vector2 pos1, Vector2 pos2, Vector2 pos3)
+Triangle::Triangle(Point2D pos1, Point2D pos2, Point2D pos3)
 {
     position1 = pos1;
     position2 = pos2;
@@ -35,17 +35,33 @@ Triangle::~Triangle()
     position3.y = 0;
 }
 
-Vector2 Triangle::GetPosition1()
+Point2D Triangle::GetPosition1()
 {
     return position1;
 }
 
-Vector2 Triangle::GetPosition2()
+void Triangle::SetPosition1(Point2D pos1)
+{
+    position1 = pos1;
+}
+
+Point2D Triangle::GetPosition2()
 {
     return position2;
 }
 
-Vector2 Triangle::GetPosition3()
+void Triangle::SetPosition2(Point2D pos2)
+{
+    position2 = pos2;
+}
+
+Point2D Triangle::GetPosition3()
 {
     return position3;
 }
+
+void Triangle::SetPosition3(Point2D pos3)
+{
+    position3 = pos3;
+}
+

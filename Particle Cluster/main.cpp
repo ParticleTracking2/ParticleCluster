@@ -8,47 +8,37 @@
 
 #include <iostream>
 #include <vector>
-#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
-#include <CGAL/Delaunay_triangulation_2.h>
+#include "DelaunayWrapper.hpp"
+#include "Point2D.hpp"
+#include "Triangle.hpp"
 
-typedef CGAL::Exact_predicates_inexact_constructions_kernel Kernel;
-typedef CGAL::Delaunay_triangulation_2<Kernel> Delaunay;
-typedef Kernel::Point_2 Point;
-
-void load_points(std::vector< Point >& points)
+void load_points(std::vector< Point2D >& points)
 {
-    points.push_back(Point(1., 1.));
-    points.push_back(Point(2., 1.));
-    points.push_back(Point(2., 2.));
-    points.push_back(Point(1., 2.));
+    points.push_back(Point2D(1., 1.));
+    points.push_back(Point2D(2., 1.));
+    points.push_back(Point2D(2., 2.));
+    points.push_back(Point2D(1., 2.));
 }
 
 int main(int argc, const char * argv[]) {
     
     using namespace std;
-    // insert code here...
     cout << "Hello, World!\n";
 
     // -----
-    std::vector< Point > points;
+    vector< Point2D > points;
+    vector< Triangle* > triangles;
     load_points(points);
-    Delaunay triangulation;
-    triangulation.insert(points.begin(), points.end());
-    std::cout << "Vertices: " << triangulation.number_of_vertices() << std::endl;
-    std::cout << "Faces: " << triangulation.number_of_faces() << std::endl;
+    DelaunayTriangulation triangulation;
+    triangles = triangulation.GetTriangulation(points);
+    std::cout << "Triangles: " << triangles.size() << std::endl;
     
-    Delaunay::Finite_faces_iterator fit;
-    int n_triangles = 0;
-    for (fit = triangulation.finite_faces_begin(); fit != triangulation.finite_faces_end(); fit++){
-        Delaunay::Face_handle face = fit;
-        std::cout << "Triangle:\t" << triangulation.triangle(face) << std::endl;
-        std::cout << "Vertex 0:\t" << triangulation.triangle(face)[0] << std::endl;
-        std::cout << "Vertex 0:\t" << triangulation.triangle(face)[1] << std::endl;
-        std::cout << "Vertex 0:\t" << triangulation.triangle(face)[2] << std::endl;
-        ++n_triangles;
+    for (unsigned long i = 0; i<triangles.size(); ++i){
+        std::cout << "Triangle:\t" << i << std::endl;
+        std::cout << "Vertex 0:\t" << triangles[i]->GetPosition1().x << ";" << triangles[i]->GetPosition1().y << std::endl;
+        std::cout << "Vertex 1:\t" << triangles[i]->GetPosition2().x << ";" << triangles[i]->GetPosition2().y << std::endl;
+        std::cout << "Vertex 2:\t" << triangles[i]->GetPosition3().x << ";" << triangles[i]->GetPosition3().y << std::endl;
     }
-    
-    std::cout << "Triangles: " << n_triangles << std::endl;
     
     return 0;
 }
