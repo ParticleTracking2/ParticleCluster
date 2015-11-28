@@ -24,7 +24,7 @@ using namespace std;
 class DelaunayTriangulation
 {
 public:
-  vector<Triangle*> GetTriangulation(vector<Point2D>& points);
+  static vector<Triangle*> GetTriangulation(vector<Point2D>& points);
 };
 
 #endif /* DelaunayWrapper_hpp */

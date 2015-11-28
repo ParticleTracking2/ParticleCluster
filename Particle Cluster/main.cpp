@@ -9,15 +9,19 @@
 #include <iostream>
 #include <vector>
 #include "DelaunayWrapper.hpp"
+#include "VoronoiWrapper.hpp"
 #include "Point2D.hpp"
 #include "Triangle.hpp"
 
 void load_points(std::vector< Point2D >& points)
 {
-    points.push_back(Point2D(1., 1.));
-    points.push_back(Point2D(2., 1.));
-    points.push_back(Point2D(2., 2.));
-    points.push_back(Point2D(1., 2.));
+    points.push_back(Point2D(0.5, 0));
+    points.push_back(Point2D(0, 0.5));
+    points.push_back(Point2D(-0.5, -0.5));
+    points.push_back(Point2D(-0.2, -0.1));
+    points.push_back(Point2D(-0.1, 0.1));
+    points.push_back(Point2D(0.1, -0.1));
+    points.push_back(Point2D(0.1, 0.1));
 }
 
 int main(int argc, const char * argv[]) {
@@ -39,6 +43,9 @@ int main(int argc, const char * argv[]) {
         std::cout << "Vertex 1:\t" << triangles[i]->GetPosition2().x << ";" << triangles[i]->GetPosition2().y << std::endl;
         std::cout << "Vertex 2:\t" << triangles[i]->GetPosition3().x << ";" << triangles[i]->GetPosition3().y << std::endl;
     }
+    
+    VoronoiDiagram diagram;
+    diagram.GetDiagram(points);
     
     return 0;
 }
